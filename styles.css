@@ -15,36 +15,38 @@ body {
 .container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    max-width: 500px;
-    width: 100%;
-    margin-left: 20%; /* Mueve el contenedor más a la izquierda */
+    width: 90%; /* Ocupa el 90% del ancho en móviles */
+    max-width: 500px; /* Limita el ancho máximo en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor */
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Tamaño de fuente más pequeño para móviles */
     color: #d32f2f;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px; /* Espacio entre botones */
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
 }
 
 button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 10px 20px;
+    font-size: 1rem; /* Tamaño de fuente más pequeño para móviles */
     color: #fff;
     background-color: #d32f2f;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%; /* Botones ocupan todo el ancho en móviles */
+    max-width: 150px; /* Limita el ancho máximo de los botones */
 }
 
 button:hover {
@@ -52,7 +54,8 @@ button:hover {
 }
 
 .osito {
-    width: 300px; /* Tamaño más grande para los GIFs */
+    width: 80%; /* Tamaño relativo para móviles */
+    max-width: 300px; /* Limita el tamaño máximo */
     margin-top: 20px;
 }
 
@@ -62,6 +65,22 @@ button:hover {
 
 .agradecimiento {
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño para móviles */
     color: #555;
+}
+
+/* Media Queries para ajustes en móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    button {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño en móviles */
+        padding: 8px 16px;
+    }
+
+    .osito {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+    }
 }
